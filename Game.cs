@@ -16,8 +16,8 @@ namespace CSharp
     class Game
     {
         private GameMode mode = GameMode.Lobby;
-        private Player player = null;
-        private Monster monster = null;
+        private Player player = null!;
+        private Monster monster = null!;
         private Random rand = new Random();
 
         public void Process()
@@ -43,7 +43,7 @@ namespace CSharp
             Console.WriteLine("[2] 궁수");
             Console.WriteLine("[3] 법사");
 
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             switch(input)
             {
                 case "1":
@@ -66,7 +66,7 @@ namespace CSharp
             Console.WriteLine("[1] 필드로 가기");
             Console.WriteLine("[2] 로비로 돌아가기");
             
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             switch(input)
             {
                 case "1":
@@ -86,7 +86,7 @@ namespace CSharp
 
             CreateRandomMonster();
 
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             switch(input)
             {
                 case "1":
